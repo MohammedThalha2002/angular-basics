@@ -1,0 +1,25 @@
+<p>REST API</p>
+
+<button (click)="getAllData()">GET ALL DATA</button>
+<button (click)="getDataById(1)">GET DATA BY ID</button>
+
+<div *ngIf="data.length > 0">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>EMAIL</th>
+      <th>ACTIONS</th>
+    </tr>
+    <ng-container *ngFor="let val of data">
+      <tr>
+        <td>{{ val.id }}</td>
+        <td>{{ val.name }}</td>
+        <td>{{ val.email }}</td>
+        <td>
+          <button (click)="sendMail(val)">SEND MAIL</button>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
