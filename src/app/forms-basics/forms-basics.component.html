@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" #forms="ngForm">
+  <div>
+    <label for="name">NAME : </label>
+    <input type="text" required id="name" name="name" ngModel />
+    <br />
+    <br />
+  </div>
+  <div>
+    <label for="email">EMAIL : </label>
+    <input type="text" required email id="email" name="email" ngModel />
+    <br />
+    <br />
+  </div>
+  <div>
+    <label for="age">AGE : </label>
+    <input type="number" required id="age" name="age" ngModel />
+    <br />
+    <br />
+  </div>
+  <button type="submit" [disabled]="!forms.valid">SUBMIT</button>
+</form>
+
+<div *ngIf="isSubmitted">
+  <h2>NAME : {{ formsValue.name }}</h2>
+  <h2>EMAIL : {{ formsValue.email }}</h2>
+  <h2>AGE : {{ formsValue.age }}</h2>
+</div>

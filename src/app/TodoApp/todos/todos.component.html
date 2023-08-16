@@ -1,0 +1,18 @@
+<div>
+  <form (ngSubmit)="addTodo()" #todoForm="ngForm">
+    <input type="text" required name="todo" ngModel />
+    <button type="submit" [disabled]="!todoForm.valid">ADD TODO</button>
+  </form>
+  <!-- todoss -->
+  <div>
+    <ul>
+      <ng-container *ngFor="let todo of todos">
+        <app-todo
+          [id]="todo.id"
+          [todo]="todo.value"
+          (deleteEmitter)="deleteTodo($event)"
+        ></app-todo>
+      </ng-container>
+    </ul>
+  </div>
+</div>
