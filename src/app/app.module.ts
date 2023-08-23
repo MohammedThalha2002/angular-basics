@@ -13,6 +13,7 @@ import { HomeComponent } from './routing-setup/home/home.component';
 import { RestApiComponent } from './rest-api/rest-api.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BasicsComponent } from './basics/basics.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     SecondComponentComponent,
     HomeComponent,
     RestApiComponent,
+    BasicsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
