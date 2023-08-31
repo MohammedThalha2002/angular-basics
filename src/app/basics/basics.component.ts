@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./basics.component.css'],
 })
 export class BasicsComponent {
-  select = 'title';
+  text = '';
 
-  clicked() {
-    console.log('clicked');
-  }
+  arr = ['EAT', 'SLEEP ', 'REPEAT'];
 }

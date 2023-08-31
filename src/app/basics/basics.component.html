@@ -1,2 +1,13 @@
-<p>basics works!</p>
-<button (click)="clicked()">CLICK ME</button>
+<input type="text" [(ngModel)]="text" />
+<div *ngIf="text">
+  <h1>The text is : {{ text }}</h1>
+</div>
+
+<div
+  *ngFor="let num of arr; let i = index"
+  [ngStyle]="{
+    color: text ? 'red' : 'black'
+  }"
+>
+  <h1>{{ i + 1 }}. {{ num }}</h1>
+</div>

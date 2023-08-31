@@ -1,0 +1,14 @@
+<h2>Birthday Date</h2>
+<h2>{{ birthDay | date }}</h2>
+<br />
+
+<h2>Async Pipe</h2>
+<div *ngIf="values | async as users; else loading">
+  <div *ngFor="let user of users">
+    <h1>{{ user.name }}</h1>
+  </div>
+</div>
+<ng-template #loading>
+  <h2>Loading ...</h2>
+</ng-template>
+<br />
