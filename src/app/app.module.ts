@@ -45,7 +45,16 @@ import { reducers, metaReducers } from './reducers';
     FooterComponent,
     DashboardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, StoreModule.forRoot({}, {}), EffectsModule.forRoot([]), StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }), StoreModule.forRoot(reducers, { metaReducers }), isDevMode() ? StoreDevtoolsModule.instrument() : []],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreModule.forRoot(reducers, { metaReducers }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
